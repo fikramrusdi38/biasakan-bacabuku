@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REW - Read Every Where</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>📖 REW - Read Every Where</h1>
+    <div class="container">
+      <!-- Menu Navigasi -->
+      <div class="menu">
+        <button onclick="showSection('listSection')" class="btn-menu">
+          📚 Bacaan Saya
+        </button>
+        <button onclick="showSection('formSection')" class="btn-menu">
+          ➕ Tambahkan Bacaan
+        </button>
+      </div>
+
+      <!-- Bagian Form Tambah Buku -->
+      <div id="formSection" class="section hidden">
+        <h2>➕ Tambahkan Bacaan</h2>
+        <form id="bookForm">
+          <input type="text" id="title" placeholder="Nama Buku" required />
+          <input type="text" id="author" placeholder="Penulis" required />
+          <input
+            type="number"
+            id="totalPages"
+            placeholder="Jumlah Halaman"
+            required
+          />
+          <button type="submit" class="btn-add">Simpan</button>
+        </form>
+      </div>
+
+      <!-- Bagian Daftar Buku -->
+      <div id="listSection" class="section hidden">
+        <h2>📚 Bacaan Saya</h2>
+        <div id="bookList"></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
