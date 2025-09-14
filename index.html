@@ -31,6 +31,12 @@
             placeholder="Jumlah Halaman"
             required
           />
+          <input
+            type="number"
+            id="lastPageRead"
+            placeholder="Halaman Terakhir Dibaca"
+            required
+          />
           <button type="submit" class="btn-add">Simpan</button>
         </form>
       </div>
@@ -39,6 +45,29 @@
       <div id="listSection" class="section hidden">
         <h2>📚 Bacaan Saya</h2>
         <div id="bookList"></div>
+      </div>
+
+      <!-- Popup Edit Buku -->
+      <div id="editPopup" class="popup">
+        <div class="popup-content">
+          <h3>✏️ Edit Buku</h3>
+          <input type="text" id="editTitle" placeholder="Nama Buku" required />
+          <input type="text" id="editAuthor" placeholder="Penulis" required />
+          <input
+            type="number"
+            id="editTotalPages"
+            placeholder="Jumlah Halaman"
+            required
+          />
+          <input
+            type="number"
+            id="editLastPageRead"
+            placeholder="Halaman Terakhir Dibaca"
+            required
+          />
+          <button onclick="saveEdit()" class="btn-save">💾 Simpan</button>
+          <button onclick="closeEdit()" class="btn-cancel">❌ Batal</button>
+        </div>
       </div>
     </div>
 
